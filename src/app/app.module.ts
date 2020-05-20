@@ -17,10 +17,16 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { navComponent } from './admin/nav.component';
+import { LoginService } from './login/login.service';
+import { navAdminComponent } from './admin/navadmin.component';
+import { NavbarService } from './admin/navbar.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent,Passangerdetails,PassangerCreate, AdminComponent, LoginComponent,routingComponents
+    AppComponent,Passangerdetails,PassangerCreate, AdminComponent, LoginComponent,routingComponents,
+    navComponent,navAdminComponent,HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -36,8 +42,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatToolbarModule,
     MatIconModule
   ],
-  providers: [PassengerService],
+  providers: [PassengerService,LoginService,NavbarService],
   //bootstrap: [AppComponent]
-  bootstrap:[LoginComponent]
+  bootstrap:[AppComponent]
 })
 export class AppModule { }

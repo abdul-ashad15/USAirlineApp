@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import {DomSanitizer} from '@angular/platform-browser';
 import { MatIconRegistry } from "@angular/material/icon";
+import { LoginService } from './login.service';
+import { User } from './user';
 
 const googleLogoURL = 
 "https://raw.githubusercontent.com/fireflysemantics/logo/master/Google.svg";
@@ -15,24 +17,40 @@ export class LoginComponent implements OnInit {
   title = 'Passenger Login';
   username : string = "";
   password : string = "";
+  userDetails : User[];
+    //loading = false;
+    submitted = false;
+    returnUrl: string;
+    error = '';
 
-  constructor(private router: Router, matIconRegistry: MatIconRegistry,
-    domSanitizer: DomSanitizer) {
+  constructor(private router: Router,matIconRegistry: MatIconRegistry,
+    domSanitizer: DomSanitizer, public loginService : LoginService,private route: ActivatedRoute
+    ) {
+      debugger;
       matIconRegistry.addSvgIcon("logo",
         domSanitizer.bypassSecurityTrustResourceUrl(googleLogoURL));
+        
+        if (this.loginService.currentUserValue) { 
+          this.router.navigate(['/']);
+      }
      }
 
+
   ngOnInit(): void {
+    this.loginService.getUsersDetails().subscribe(data =>this.userDetails = data);
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
   login(username : string,password : string) : void
   {
     debugger;
-    if(this.username == "Admin" && this.password == "12345")
+    for (var user of this.userDetails) {
+    
+    if(this.username == user.username && this.password == user.password)
     {
-      //this.router.navigateByUrl(`/Admin`);
-      //this.router.navigateByUrl('/Admin'); 
-      this.router.navigate(['/admin'])
+      localStorage.setItem('currentUser', JSON.stringify(user));
+      this.router.navigate(['/home']);
     }
-  }
+    }
+  } 
 }

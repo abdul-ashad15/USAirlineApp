@@ -1,0 +1,22 @@
+{
+    "Users": [
+      {
+        "id": 1001,
+        "username": "admin",
+        "password": "admin",
+        "firstName": "System",
+        "lastName": "Administrator",
+        "role": "Admin",
+        "token": ""
+      },
+      {
+        "id": 1002,
+        "username": "user",
+        "password": "user",
+        "firstName": "Test",
+        "lastName": "User",
+        "role": "User",
+        "token": ""
+      }
+    ]
+  }
