@@ -1,0 +1,32 @@
+<div class="row">
+        <div class="col-md-5 form-group">
+                <input placeholder="Username" class="form-control" [(ngModel)] = "passengerService.currentPassenger.username">
+            </div>
+    <div class="col-md-5 form-group">
+        <input placeholder="Name" class="form-control" [(ngModel)] = "passengerService.currentPassenger.name">
+    </div>
+    <div class="col-md-5 form-group">
+            <input placeholder="Age" class="form-control" [(ngModel)] = "passengerService.currentPassenger.age">
+        </div>
+        <div class="col-md-5 form-group">
+                <input placeholder="DOB" class="form-control" [(ngModel)] = "passengerService.currentPassenger.dateOfBirth">
+            </div>
+            <div class="col-md-5 form-group">
+                    <input placeholder="Gender" class="form-control" [(ngModel)] = "passengerService.currentPassenger.gender">
+                </div>
+                <div class="col-md-5 form-group">
+                        <input placeholder="Passport" class="form-control" [(ngModel)] = "passengerService.currentPassenger.passoprt">
+                    </div>
+                <div class="col-md-10 form-group">
+                        <input placeholder="Address" class="form-control" [(ngModel)] = "passengerService.currentPassenger.address">
+                    </div>
+    </div> 
+    
+    <div class="row">
+        <div class="col-md-4">
+        <button class="btn btn-success btn-block btn-lg" (click)="createUpdatePassenger(passengerService.currentPassenger)">Save</button>
+    </div>
+    <div class="col-md-4">
+            <button class="btn btn-primary btn-block btn-lg" (click)= "clear()">Reset</button>
+        </div>
+    </div>

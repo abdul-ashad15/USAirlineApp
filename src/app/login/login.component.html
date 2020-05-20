@@ -1,0 +1,21 @@
+<!--<router-outlet></router-outlet>-->
+<div fxLayoutAlign= "center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25" >
+            <mat-toolbar color="primary">Login Page</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+            <mat-form-field>
+              <input matInput placeholder="Username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+          
+            <mat-form-field >
+              <input type="password" matInput placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="button" (click)="login(username,password)">Login</button>
+            <div style="height: 10rem; display: flex; align-items: center; justify-content:center;">
+            <button mat-button style="padding: 1rem;">
+              <mat-icon style="width: 50px; height:30px" svgIcon="logo"></mat-icon> Login With Google
+          </button>
+        </div>
+          </form>
+    </mat-card>
+</div>

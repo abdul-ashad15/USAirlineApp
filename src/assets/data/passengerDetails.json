@@ -1,0 +1,54 @@
+{
+  "Passengers": [
+    {
+      "id": 1001,
+      "username": "PS101",
+      "name": "Abdul Ashad",
+      "age": "35",
+      "dateOfBirth": "25/06/1985",
+      "gender": "Male",
+      "passoprt": "M2673633",
+      "address": "Bangalore"
+    },
+    {
+      "id": 1002,
+      "username": "PS102",
+      "name": "Abdul1",
+      "age": 40,
+      "dateOfBirth": "25/06/1985",
+      "gender": "Male",
+      "passoprt": "M2673633",
+      "address": "Bangalore"
+    },
+    {
+      "id": 1003,
+      "username": "PS103",
+      "name": "Abdul1",
+      "age": 30,
+      "dateOfBirth": "25/06/1985",
+      "gender": "Male",
+      "passoprt": "M2673633",
+      "address": "Bangalore"
+    },
+    {
+      "id": 1004,
+      "username": "PS104",
+      "name": "Abdul1",
+      "age": "50",
+      "dateOfBirth": "25/06/1985",
+      "gender": "Male",
+      "passoprt": "M2673633",
+      "address": "Bangalore"
+    },
+    {
+      "id": 1005,
+      "username": "PS105",
+      "name": "Aayera",
+      "age": "1",
+      "dateOfBirth": "25/03/2020",
+      "gender": "Female",
+      "passoprt": "M2673635",
+      "address": "Bangalore"
+    }
+  ]
+}
