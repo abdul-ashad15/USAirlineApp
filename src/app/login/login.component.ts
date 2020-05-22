@@ -14,7 +14,7 @@ const googleLogoURL =
 })
 export class LoginComponent implements OnInit {
 
-  title = 'Passenger Login';
+  title = 'Login Page';
   username : string = "";
   password : string = "";
   userDetails : User[];
