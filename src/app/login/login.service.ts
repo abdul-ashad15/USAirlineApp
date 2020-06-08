@@ -2,6 +2,7 @@ import { Injectable, OnInit } from '@angular/core';
 import { HttpClient,HttpClientModule  } from '@angular/common/http'
 import { Observable,BehaviorSubject } from 'rxjs';
 import { User } from './user';
+import { Role } from './role';
 
 @Injectable()
 
@@ -12,6 +13,17 @@ export class LoginService
     public currentUser: Observable<User>;
     users : User[];
     user : User;
+  
+  currentuser : User = {
+        id : null,
+        username : '',
+        password: '',
+        email: '',
+        phone: null,
+        firstName: '',
+        lastName: '',
+        role: Role.User
+      }
 
     constructor(private http: HttpClient ) {
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
@@ -35,5 +47,11 @@ export class LoginService
         // remove user from local storage to log user out
         localStorage.removeItem('currentUser');
         this.currentUserSubject.next(null);
+    }
+  
+  registerUsers(user : User) : Observable<User>
+    {
+        debugger;
+        return this.http.post<User>(this.url, user);
     }
 }
