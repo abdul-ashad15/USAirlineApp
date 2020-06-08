@@ -22,11 +22,15 @@ import { LoginService } from './login/login.service';
 import { navAdminComponent } from './admin/navadmin.component';
 import { NavbarService } from './admin/navbar.service';
 import { HomeComponent } from './home/home.component';
+import { Ancillaryservices } from './ancillary-services/ancillaryservices.component';
+import { AncillaryService } from './ancillary-services/ancillary.service';
+import { Ancillarlistservices } from './ancillary-services/ancillary-listservices.component';
+import { FilterPipe } from './passenger-details/filterPipe';
 
 @NgModule({
   declarations: [
     AppComponent,Passangerdetails,PassangerCreate, AdminComponent, LoginComponent,routingComponents,
-    navComponent,navAdminComponent,HomeComponent
+    navComponent,navAdminComponent,HomeComponent, Ancillaryservices,Ancillarlistservices,FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,7 @@ import { HomeComponent } from './home/home.component';
     MatToolbarModule,
     MatIconModule
   ],
-  providers: [PassengerService,LoginService,NavbarService],
+  providers: [PassengerService,LoginService,NavbarService,AncillaryService],
   //bootstrap: [AppComponent]
   bootstrap:[AppComponent]
 })
