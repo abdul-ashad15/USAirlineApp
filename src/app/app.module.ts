@@ -26,11 +26,13 @@ import { Ancillaryservices } from './ancillary-services/ancillaryservices.compon
 import { AncillaryService } from './ancillary-services/ancillary.service';
 import { Ancillarlistservices } from './ancillary-services/ancillary-listservices.component';
 import { FilterPipe } from './passenger-details/filterPipe';
+import { SignupComponent } from './login/signup.components';
 
 @NgModule({
   declarations: [
     AppComponent,Passangerdetails,PassangerCreate, AdminComponent, LoginComponent,routingComponents,
-    navComponent,navAdminComponent,HomeComponent, Ancillaryservices,Ancillarlistservices,FilterPipe
+    navComponent,navAdminComponent,HomeComponent, Ancillaryservices,Ancillarlistservices,FilterPipe,
+        SignupComponent
   ],
   imports: [
     BrowserModule,
