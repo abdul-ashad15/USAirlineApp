@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { Role } from './login/role';
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './login/auth.guard';
+import { Ancillaryservices } from './ancillary-services/ancillaryservices.component';
 
 
 export const routes: Routes = [
@@ -29,6 +30,10 @@ export const routes: Routes = [
   {
     path:'home',
     component: HomeComponent
+  },
+  {
+    path:'ancilary',
+    component: Ancillaryservices
   }
   /*{
     path: 'login',
