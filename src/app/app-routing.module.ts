@@ -7,7 +7,7 @@ import { Role } from './login/role';
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './login/auth.guard';
 import { Ancillaryservices } from './ancillary-services/ancillaryservices.component';
-
+import { SignupComponent } from './login/signup.components';
 
 export const routes: Routes = [
   {    
@@ -34,6 +34,14 @@ export const routes: Routes = [
   {
     path:'ancilary',
     component: Ancillaryservices
+  },
+  {
+    path:'signup',
+    component: SignupComponent
+  },
+  {
+    path:'login',
+    component: LoginComponent
   }
   /*{
     path: 'login',
