@@ -20,7 +20,8 @@ export class PassengerService {
     dateOfBirth : '',
     gender : '',
     passoprt : '',
-    address : ''
+    address : '',
+    seatnumber: ''
   }
 
   passenger : any[];
