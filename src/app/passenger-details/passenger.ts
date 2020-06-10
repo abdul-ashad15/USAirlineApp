@@ -10,4 +10,5 @@ export interface IPassenger
     gender : string;
     passoprt : string;
     address : string;
+  seatnumber : string;
 }
