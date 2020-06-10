@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Passangerdetails } from './passenger-details/passangerdetails.component';
@@ -27,12 +27,17 @@ import { AncillaryService } from './ancillary-services/ancillary.service';
 import { Ancillarlistservices } from './ancillary-services/ancillary-listservices.component';
 import { FilterPipe } from './passenger-details/filterPipe';
 import { SignupComponent } from './login/signup.components';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatRadioModule} from '@angular/material/radio';
+import { InFlightCreate } from './Inflight/inflightcreate.component';
+import { InFlightList } from './Inflight/inflightlist.component';
+import { InFlightService } from './Inflight/inflight.service';
 
 @NgModule({
   declarations: [
     AppComponent,Passangerdetails,PassangerCreate, AdminComponent, LoginComponent,routingComponents,
     navComponent,navAdminComponent,HomeComponent, Ancillaryservices,Ancillarlistservices,FilterPipe,
-        SignupComponent
+        SignupComponent,InFlightCreate,InFlightList
   ],
   imports: [
     BrowserModule,
@@ -46,9 +51,14 @@ import { SignupComponent } from './login/signup.components';
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatDatepickerModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatRadioModule
   ],
-  providers: [PassengerService,LoginService,NavbarService,AncillaryService],
+  providers: [PassengerService,LoginService,NavbarService,AncillaryService,MatDatepickerModule,InFlightService],
   //bootstrap: [AppComponent]
   bootstrap:[AppComponent]
 })
