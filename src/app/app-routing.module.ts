@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './login/auth.guard';
 import { Ancillaryservices } from './ancillary-services/ancillaryservices.component';
 import { SignupComponent } from './login/signup.components';
+import { InFlightCreate } from './Inflight/inflightcreate.component';
 
 export const routes: Routes = [
   {    
@@ -42,7 +43,12 @@ export const routes: Routes = [
   {
     path:'login',
     component: LoginComponent
+  },
+  {
+    path:'inflight',
+    component: InFlightCreate
   }
+  
   /*{
     path: 'login',
     component: LoginComponent
