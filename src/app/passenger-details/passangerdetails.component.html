@@ -14,6 +14,7 @@
         <th>Gender</th>
         <th>Passport Number</th>
         <th>Address</th>
+         <th>Seat Number</th>
       </tr>
     </thead>
   
@@ -25,6 +26,7 @@
         <td>{{passenger.gender}}</td>
         <td>{{passenger.passoprt}}</td>
         <td>{{passenger.address}}</td>
+        <td>{{passenger.seatnumber}}</td>
         <td><a class="btn" (click)="editPassenger(passenger)"><i class="fa fa-edit" ></i></a></td>
         <td><a class="btn text-danger" (click)="deletePassenger(passenger.id)"><i class="fa fa-trash"></i></a></td>
       </tr>
