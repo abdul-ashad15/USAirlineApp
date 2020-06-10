@@ -5,7 +5,7 @@ import { IPassenger } from '../passenger-details/passenger';
 @Component({
     selector: 'passenger-create',
     templateUrl: './passengercreate.component.html',
-    //styleUrls : ['./passengercreate.component.css']
+    styleUrls : ['./passengercreate.component.css']
   })
 
   export class PassangerCreate
@@ -48,7 +48,8 @@ import { IPassenger } from '../passenger-details/passenger';
           dateOfBirth : '',
           gender : '',
           passoprt : '',
-          address : ''
+          address : '',
+          seatnumber: ''
         }
       }
   }
