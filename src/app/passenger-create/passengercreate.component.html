@@ -1,7 +1,7 @@
 <div class="row">
-        <div class="col-md-5 form-group">
+       <!-- <div class="col-md-5 form-group">
                 <input placeholder="Username" class="form-control" [(ngModel)] = "passengerService.currentPassenger.username">
-            </div>
+            </div>-->
     <div class="col-md-5 form-group">
         <input placeholder="Name" class="form-control" [(ngModel)] = "passengerService.currentPassenger.name">
     </div>
@@ -13,7 +13,12 @@
                 
             </div>
             <div class="col-md-5 form-group">
-                    <input placeholder="Gender" class="form-control" [(ngModel)] = "passengerService.currentPassenger.gender">
+                   <!-- <input placeholder="Gender" class="form-control" [(ngModel)] = "passengerService.currentPassenger.gender">-->
+              <mat-form-field>
+                        <mat-select placeholder="Gender" [(ngModel)]="passengerService.currentPassenger.gender">
+                            <mat-option *ngFor="let orientation of orientations" [value]="orientation.value">{{ orientation.viewValue }}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
                 </div>
                 <div class="col-md-5 form-group">
                         <input placeholder="Passport" class="form-control" [(ngModel)] = "passengerService.currentPassenger.passoprt">
