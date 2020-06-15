@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavbarService } from './admin/navbar.service';
 import { User } from './login/user';
@@ -11,7 +11,7 @@ import { LoginService } from './login/login.service';
   //template : `<passenger-details></passenger-details>`,
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Passenger Details';
   currentUser: User;
 
@@ -22,10 +22,14 @@ export class AppComponent {
       //this.navService.show();
   }
 
+  ngOnInit()
+  {
+    this.editusers();
+  }
+
   isAdmin()
   {
-    debugger;
-    return this.currentUser && this.currentUser.role === Role.Admin;
+    return this.currentUser && this.currentUser.role === "Admin";
   }
 
   logout() {
