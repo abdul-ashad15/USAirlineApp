@@ -32,12 +32,14 @@ import {MatRadioModule} from '@angular/material/radio';
 import { InFlightCreate } from './Inflight/inflightcreate.component';
 import { InFlightList } from './Inflight/inflightlist.component';
 import { InFlightService } from './Inflight/inflight.service';
+import { EditUsers } from './login/edit-profile.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,Passangerdetails,PassangerCreate, AdminComponent, LoginComponent,routingComponents,
     navComponent,navAdminComponent,HomeComponent, Ancillaryservices,Ancillarlistservices,FilterPipe,
-        SignupComponent,InFlightCreate,InFlightList
+        SignupComponent,InFlightCreate,InFlightList,EditUsers
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import { InFlightService } from './Inflight/inflight.service';
     FormsModule,
     ReactiveFormsModule,
     MatDatepickerModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSelectModule
   ],
   providers: [PassengerService,LoginService,NavbarService,AncillaryService,MatDatepickerModule,InFlightService],
   //bootstrap: [AppComponent]
