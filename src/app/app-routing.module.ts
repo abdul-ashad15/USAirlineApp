@@ -9,6 +9,7 @@ import { AuthGuard } from './login/auth.guard';
 import { Ancillaryservices } from './ancillary-services/ancillaryservices.component';
 import { SignupComponent } from './login/signup.components';
 import { InFlightCreate } from './Inflight/inflightcreate.component';
+import { EditUsers } from './login/edit-profile.component';
 
 export const routes: Routes = [
   {    
@@ -47,6 +48,10 @@ export const routes: Routes = [
   {
     path:'inflight',
     component: InFlightCreate
+  },
+  {
+    path:'editprofile',
+    component: EditUsers
   }
   
   /*{
