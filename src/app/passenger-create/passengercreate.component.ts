@@ -10,9 +10,10 @@ import { IPassenger } from '../passenger-details/passenger';
 
   export class PassangerCreate
   {
+    orientations : any;
       constructor(public passengerService : PassengerService)
       {
-
+          this.orientations = [{ value: 'Male', viewValue: 'Male' }, { value: 'Female', viewValue: 'Female' }];
       }
 
       createUpdatePassenger(currentPassenger : IPassenger)
